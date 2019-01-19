@@ -1,0 +1,142 @@
+#social {
+    text-align: center;
+    position:relative;
+    bottom:0;
+    width:100%;
+    height:35px;
+    background : #595959;
+    margin-top:-40px;
+}
+
+
+#custom-select{
+
+}
+
+#topDiv{
+
+    background-color: #ddd;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width : 100%;
+    height:10%
+}
+
+
+#movTabl{
+    background-color : beige;
+    padding: 0;
+    margin: 0;
+    width : 100%;
+    height:20%
+}
+
+#buyTick{
+    background-color: burlywood;
+    padding: 0;
+    margin: 0;
+    width : 100%;
+    height:25%
+}
+#html{
+    height: 100%;
+}
+
+#body{
+    margin:0;
+    padding:0;
+    min-height:100%;
+    /*height:100%;*/
+
+}
+#registration h3{
+    margin-left: 30px;
+    float: left;
+    width: 197px;
+    height: 45px;
+    /*text-indent: -9999px;*/
+}
+#registration form{
+    float: right;
+    margin-right: 30px;
+    height: 40px;
+    padding-top: 8px;
+}
+#registration form label{
+    display: inline-block;
+    margin: 0 2px;
+}
+/*#h3{*/
+    /*margin-left: 30px;*/
+    /*float: left;*/
+    /*width: 197px;*/
+    /*height: 45px;*/
+    /*text-indent: -9999px;*/
+/*}*/
+#registration{
+    border-top:7px solid #505559;
+    margin:0 auto;
+    width:100%;
+    /*width:1360px;*/
+    background: #eee;
+    height: 30px;
+    padding: 20px 0;
+    font: 12px arial, sans-serif;
+}
+#search{
+    float: right;
+    margin-right: 30px;
+    height: 40px;
+    padding-top: 8px;
+}
+#s-user{
+    display: block;
+    width: 100px;
+    border: 1px solid #eee;
+    padding: 3px 0 3px 0;
+    margin-bottom: -1px;
+}
+#s-email{
+    display: block;
+    width: 100px;
+    border: 1px solid #eee;
+    padding: 3px 0 3px 0;
+    margin-bottom: -1px;
+}
+#s-pass{
+    display: block;
+    width: 100px;
+    border: 1px solid #eee;
+    padding: 3px 0 3px 0;
+    margin-bottom: -1px;
+}
+#sign\ up{
+    height: 23px;
+    vertical-align: bottom;
+    background: #505559;
+    color: #fff;
+    border: 1px solid #ddd;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/*THIS WILL BE TEMP IF BAD*/
+
+.table tbody tr td:not(:first-child) {
+    border: 1px solid blue;
+    width: 1em;
+    height:1em;
+}
+
+.table tbody tr td:first-child {
+    font-weight:bold;
+}
+
+/*.table tr td:nth-child(5) {*/
+    /*border:none!important;*/
+/*}*/
+
+.table {
+    border-spacing: 3em;
+}
