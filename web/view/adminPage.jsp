@@ -46,6 +46,9 @@
         </tr>
     </c:forEach>
 </table>
+<form id="clearTickets" method="post" action="/clearTickets">
+    <input type="submit" name="clear tickets" value="clear tickets"/>
+</form>
 
 <form id="loadMoviesForAdmin" method="get" action="/loadMoviesForAdmin">
     <input type="submit" name="Load Movies" value="Load Movies">

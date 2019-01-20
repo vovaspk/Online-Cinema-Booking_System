@@ -13,6 +13,13 @@
     <style>
         <%@include file="../WEB-INF/css/footers.css"%>
     </style>
+    <style>
+        body {
+            background-image: url("../icons/background.png");
+        }
+
+    </style>
+
 </head>
 <body>
 <div id="registration">

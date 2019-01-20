@@ -37,6 +37,22 @@ public class TicketDao {
         return ticketList;
     }
 
+    public boolean clearTikets(){
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(databaseUrl, user, password);
+            String query = "DELETE FROM booking";
+            PreparedStatement statement = conn.prepareStatement(query);
+            statement.executeUpdate();
+            return true;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     public List<Ticket> getTicketsListforUser(String username) throws SQLException {
         UserDao dao = new UserDao();
         int id = dao.findUser(username);

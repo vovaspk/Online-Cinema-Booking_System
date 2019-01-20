@@ -105,16 +105,11 @@
     </table>
 
 
-
-    <c:out value="Home"/>
-
-    <%--<<a href="/view/login.jsp">Log out</a>--%>
     <form action="${pageContext.request.contextPath}/logout" method="post">
         <input type="submit" value="Logout"/>
     </form>
 </div>
-<%--<c:set var="un" value="${param.username}"/>--%>
-<%--<c:out value="${param.username}"/>--%>
+
 <%@include file="footer.jsp" %>
 </body>
 </html>
