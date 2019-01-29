@@ -12,6 +12,9 @@
 <body>
 <div id="topDiv">
     <h1>Hello User</h1>
+    <%--<form action="${pageContext.request.contextPath}/logout" method="post">--%>
+        <%--<input type="submit" value="Logout"/>--%>
+    <%--</form>--%>
 </div>
 <div id="movTabl">
     <h2>Movies</h2>
@@ -105,6 +108,10 @@
     </table>
 
 
+
+    <%--<c:out value="Home"/>--%>
+
+    <%--<<a href="/view/login.jsp">Log out</a>--%>
     <form action="${pageContext.request.contextPath}/logout" method="post">
         <input type="submit" value="Logout"/>
     </form>
