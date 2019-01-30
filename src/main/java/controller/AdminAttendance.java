@@ -2,6 +2,7 @@ package controller;
 
 import model.Ticket;
 import model.TicketDao;
+import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,6 +16,7 @@ import java.util.List;
 
 @WebServlet("/loadAttendanceForAdmin")
 public class AdminAttendance extends HttpServlet {
+    Logger log = Logger.getLogger(AdminAttendance.class);
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         TicketDao ticketDao = new TicketDao();
@@ -26,6 +28,7 @@ public class AdminAttendance extends HttpServlet {
             RequestDispatcher rd = req.getRequestDispatcher("/view/adminPage.jsp");
             rd.forward(req, resp);
         } catch (SQLException e) {
+            log.error("AdminAttendance.doGet(): ", e);
             e.printStackTrace();
         }
 

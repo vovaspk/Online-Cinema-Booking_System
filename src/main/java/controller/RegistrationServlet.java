@@ -17,7 +17,7 @@ public class RegistrationServlet extends HttpServlet {
     static final Logger logger = Logger.getLogger(RegistrationServlet.class);
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
 

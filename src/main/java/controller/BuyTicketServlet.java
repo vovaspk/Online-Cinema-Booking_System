@@ -1,6 +1,7 @@
 package controller;
 
 import model.*;
+import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @WebServlet("/buyTicket")
 public class BuyTicketServlet extends HttpServlet {
+    Logger log = Logger.getLogger(BuyTicketServlet.class);
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //should get movie_id and user_id for ticket
@@ -36,13 +38,13 @@ public class BuyTicketServlet extends HttpServlet {
             System.out.println(time);
             System.out.println(seat);
             ticket.toString();
-            //TODO
+
             //if(ticket.isExist(){DO NOT ADD Ticket} else{ADD Ticket}
             ticketDao.addTicket(user_id, name, day, time, seat);
-            //TODO
+
             List<Movie> listMovies = dao.list();
             req.setAttribute("listMovies", listMovies);
-            //TODO CHECK ON NullPointerEXCeption
+
             List<Ticket> listTickets = ticketDao.getTicketsListforUser(userName);
             req.setAttribute("listTickets", listTickets);
 
@@ -53,6 +55,7 @@ public class BuyTicketServlet extends HttpServlet {
 
 
         } catch (SQLException e) {
+            log.error("BuyTicketsServlet.doPost(): ", e);
             e.printStackTrace();
         }
 

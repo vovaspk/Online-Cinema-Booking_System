@@ -2,6 +2,7 @@ package controller;
 
 import model.Movie;
 import model.MovieDao;
+import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,6 +16,7 @@ import java.util.List;
 
 @WebServlet("/loadMoviesForAdmin")
 public class AdminMoviesLoader extends HttpServlet {
+    Logger log = Logger.getLogger(AdminMoviesLoader.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -23,6 +25,7 @@ public class AdminMoviesLoader extends HttpServlet {
             List<Movie> listMovies = movieDao.list();
             req.setAttribute("listMovies", listMovies);
         } catch (SQLException e) {
+            log.error("AdminMoviesLoader.doGet(): ", e);
             e.printStackTrace();
         }
         RequestDispatcher rd = req.getRequestDispatcher("/view/adminPage.jsp");

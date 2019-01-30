@@ -1,5 +1,7 @@
 package controller;
 
+import org.apache.log4j.Logger;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +11,7 @@ import java.io.IOException;
 
 @WebServlet("/deleteMovie")
 public class DeletingMovie extends HttpServlet {
+    Logger log = Logger.getLogger(DeletingMovie.class);
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
@@ -18,6 +21,7 @@ public class DeletingMovie extends HttpServlet {
             resp.sendRedirect(req.getContextPath() + "/view/adminPage.jsp");
         }
         catch(Exception ex) {
+            log.error("DeletingMovie.doPost(): ", ex);
             getServletContext().getRequestDispatcher("/notfound.jsp").forward(req, resp);
         }
     }

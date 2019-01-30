@@ -18,7 +18,7 @@ import java.util.List;
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
     static Logger logger = Logger.getLogger(LoginServlet.class);
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         DBUtils dbUtils = new DBUtils();
@@ -54,7 +54,7 @@ public class LoginServlet extends HttpServlet {
             try {
                 List<Movie>listMovies = dao.list();
                 request.setAttribute("listMovies", listMovies);
-                //TODO CHECK ON NullPointerEXCeption
+
                 List<Ticket> listTickets = ticketDao.getTicketsListforUser(userName);
                 request.setAttribute("listTickets", listTickets);
             } catch (SQLException e) {
